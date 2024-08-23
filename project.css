@@ -1,0 +1,177 @@
+/* General Styling */
+.project-page {
+    padding: px;
+    font-family: Arial, sans-serif;
+}
+
+/* First Container */
+.first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+    height: 80vh;
+}
+
+.info-box {
+    margin-bottom: 20px;
+    padding-top: 350px;
+}
+
+.info-box h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: rgb(244, 240, 240);
+}
+
+.info-box p {
+    font-size: 14px;
+    color: white;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Second Container */
+.second-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    height: 80vh;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.grid-item.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.grid-item.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-start;
+}
+
+.grid-item.info h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.grid-item.info p {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box, .image-box, .grid-item {
+        text-align: center;
+    }
+}
+
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 120px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+    color: white;
+   
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .scroll{
+    color: white;
+    padding-top: 40px;
+  }
+  .details{
+    font-size: 18px;
+    color: black;
+  }
+  @media (max-width: 480px) {
+    .first-container {
+        height: auto; /* Adjust height to fit content */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .info-box {
+        padding-top: 50px; /* Further reduce padding-top */
+    }
+
+    .info-box h2 {
+        font-size: 1.2em; /* Even smaller font size for h2 */
+    }
+
+    .info-box p {
+        font-size: 10px; /* Even smaller font size for p */
+    }
+}
+@media (max-width: 480px) {
+    .grid-item.image img {
+        height: 40vh; /* Further reduce image height for extra small screens */
+    }
+
+    .grid-item.info h3 {
+        font-size: 1.2em; /* Further reduce font size for headings */
+    }
+
+    .grid-item.info p {
+        font-size: 0.9em; /* Further reduce font size for text */
+    }
+    .grid-container {
+        display: grid;
+        
+        gap: 20px;
+        width: 100%;
+        max-width: 1500px;
+        height: 200vh;
+    }
+}
